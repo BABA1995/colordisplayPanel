@@ -1,0 +1,25 @@
+<div class="container">
+  <div class="input-panel">
+    <label> Hex Code: </label>
+    <input
+      type="text"
+      [(ngModel)]="hexaValue"
+      [style.color]="hexaValue"
+      [formControl]="name"
+      [ngClass]="{ 'is-invalid': name.invalid && (name.dirty || name.touched) }"
+    />
+
+    <div
+      class="invalid-feedback"
+      *ngIf="name.invalid && (name.dirty || name.touched)"
+    >
+      <div *ngIf="name.errors?.required">Hex code is required.</div>
+      <div *ngIf="name.errors?.minlength">Invalid Hexa code</div>
+      <div *ngIf="name.errors?.maxlength">Invalid Hexa code</div>
+    </div>
+  </div>
+  <app-colorpanel
+    attr.backgroundcolor="hexaValue"
+    [style.background-color]="hexaValue"
+  ></app-colorpanel>
+</div>

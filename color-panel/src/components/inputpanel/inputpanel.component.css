@@ -1,0 +1,22 @@
+.container{
+    display: flex;
+    height: 100%
+}
+label{
+    font-size: 15px;
+    font-weight: 700;
+    font-family: sans-serif;
+}
+.input-panel{
+    width:100%;
+    margin:auto;
+    text-align: center;
+}
+.is-invalid{
+    border-color: #dc3545;  
+    color: #dc3545;
+}
+
+  .invalid-feedback{
+      color:#dc3545;   
+  }  
